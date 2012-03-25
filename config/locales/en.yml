@@ -3,3 +3,8 @@
 
 en:
   hello: "Hello world"
+  simple_captcha:
+    label: "Captcha"
+    message:
+      default: "Secret Code did not match with the Image"
+      message: "The secret Image and code were different"

@@ -35,6 +35,10 @@
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
+  <!--<div class="field"> <%#= show_simple_captcha(object: 'message') %> </div>-->
+  <div class="field">
+    <%= f.simple_captcha code_type: 'numeric' %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

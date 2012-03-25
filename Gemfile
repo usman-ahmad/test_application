@@ -23,6 +23,9 @@ end
 
 gem 'jquery-rails'
 
+# To use Captcha
+gem "galetahub-simple_captcha", :require => "simple_captcha"
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

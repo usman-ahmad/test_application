@@ -40,10 +40,16 @@ class MessagesController < ApplicationController
   # POST /messages
   # POST /messages.json
   def create
+    #if simple_captcha_valid?
+    #  return render json: [true, params]
+    #else
+    #  return render json: [false, params]
+    #end
     @message = Message.new(params[:message])
 
     respond_to do |format|
-      if @message.save
+      #if simple_captcha_valid? && @message.save
+      if @message.save_with_captcha
         format.html { redirect_to @message, notice: 'Message was successfully created.' }
         format.json { render json: @message, status: :created, location: @message }
       else
